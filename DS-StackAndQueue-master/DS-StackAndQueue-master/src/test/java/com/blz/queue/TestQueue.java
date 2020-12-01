@@ -1,41 +1,25 @@
-package com.blz.queue;
+package com.blz.stack;
 
 import static org.junit.Assert.*;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.blz.queue.INode;
-import com.blz.queue.MyNode;
-import com.blz.queue.Queue;
+import com.blz.stack.MyLinkedList;
 
-public class TestQueue {
+public class TestStack {
 
 	@Test
-	public void Enquegiven3Numbers() {
-		MyNode<Integer> myFirstNode = new MyNode<Integer>(56);
+	public void Pushgiven3Numbers() {
+		MyNode<Integer> myFirstNode = new MyNode<Integer>(70);
 		MyNode<Integer> mySecondNode = new MyNode<Integer>(30);
-		MyNode<Integer> myThirdNode = new MyNode<Integer>(70);
-		Queue<Integer> queue = new Queue<Integer>();
-		queue.enque(myFirstNode);
-		queue.enque(mySecondNode);
-		queue.enque(myThirdNode);
-		INode peak = queue.peak();
-		queue.printMyNodes();
-		Assert.assertEquals(myFirstNode, peak);
-	}
-	
-	@Test
-	public void given3NumbersEnquedShouldDequeElementsUntilItIsEmptyTillItsPeak() {
-		MyNode<Integer> myFirstNode = new MyNode<Integer>(56);
-		MyNode<Integer> mySecondNode = new MyNode<Integer>(30);
-		MyNode<Integer> myThirdNode = new MyNode<Integer>(70);
-		Queue<Integer> queue = new Queue<Integer>();
-		queue.enque(myFirstNode);
-		queue.enque(mySecondNode);
-		queue.enque(myThirdNode);
-		INode deque = null;
-		deque = queue.deque();
-		Assert.assertEquals(myFirstNode, deque);
+		MyNode<Integer> myThirdNode = new MyNode<Integer>(56);
+		Stack<Integer> stack = new Stack<Integer>();
+		stack.push(myFirstNode);
+		stack.push(mySecondNode);
+		stack.push(myThirdNode);
+		INode peak = stack.peak();
+		stack.printMyNodes();
+		Assert.assertEquals(myThirdNode, peak);
 	}
 }

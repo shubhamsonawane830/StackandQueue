@@ -15,12 +15,4 @@ public class Stack<K> extends MyLinkedList<K> {
 	public INode peak() {
 		return myLinkedList.head;
 	}
-	
-	public INode pop() {
-		return myLinkedList.pop();
-	}
-
-	public boolean isEmpty() {
-		return myLinkedList.isEmpty();
-	}
 }
